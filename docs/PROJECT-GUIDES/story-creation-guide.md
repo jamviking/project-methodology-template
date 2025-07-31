@@ -36,6 +36,29 @@ Stories must include specific requirements for integration testing and validatio
 - **Complexity**: [Simple/Medium/Complex]
 - **Type**: [Feature/Enhancement/Bug Fix/Technical Debt]
 
+## Business Value Assessment (MANDATORY)
+
+### ERP Project Vision Alignment
+- **Vision Alignment**: How does this story support the [ERP Project Vision](../ERP-PROJECT-BRIEF.md)?
+- **Strategic Value**: What strategic capabilities does this enable for the ERP platform?
+- **User Impact**: How does this directly benefit end users and business processes?
+
+### Phase Dependencies & Enablement
+- **Phase 0 Dependencies**: What foundational capabilities does this support or complete?
+- **Phase 1/2 Enablement**: What future phase capabilities does this unblock or accelerate?
+- **Integration Points**: How does this integrate with other modules and components?
+
+### Technical Debt & ROI Analysis
+- **Technical Debt Prevention**: What future refactoring or architectural changes does this prevent?
+- **Development Investment**: Estimated time/resources required for implementation
+- **Prevented Rework**: Estimated time/cost saved by implementing this correctly now
+- **ROI Calculation**: Net benefit calculation (prevented work + strategic value - implementation cost)
+
+### Success Metrics
+- **Technical Metrics**: Code coverage, performance benchmarks, test pass rates
+- **Business Metrics**: User adoption, process efficiency, error reduction
+- **Strategic Metrics**: Platform capabilities enabled, integration readiness achieved
+
 ## Dependencies & Relationships
 
 ### Depends On (Prerequisites)
@@ -83,6 +106,13 @@ Stories must include specific requirements for integration testing and validatio
 - [ ] [API endpoints responding with correct formats]
 - [ ] [Database operations performing within limits]
 - [ ] [Integration points working with dependent systems]
+
+### Testing Strategy Compliance (MANDATORY - ADR-004)
+- [ ] **Testing Strategy Consulted**: [4-testing-standards.md](../standards/4-testing-standards.md) and [ADR-002](../standards/adr-002-testing-patterns.md) reviewed
+- [ ] **TDD Approach Planned**: Tests will be written before implementation (Red-Green-Refactor cycle)
+- [ ] **Test Pyramid Allocation**: 70% unit tests, 20% integration tests, 10% e2e tests
+- [ ] **Integration Test Database**: Real test database used (no mocking per ADR-002)
+- [ ] **Business Value Documented**: Complete business value assessment linked and approved
 
 ### Quality Requirements
 - [ ] [Code coverage >= 80%]

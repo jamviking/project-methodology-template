@@ -18,7 +18,7 @@ Our agile development methodology is built on the principle that every level of 
 - **[ADR Process Guide](./adr-process-guide.md)**: Comprehensive guide for creating, managing, and maintaining architectural decisions throughout {{PROJECT_NAME}} lifecycle
 
 ### 📋 **Story Development Framework**
-- **[Story Creation Guide](./story-creation-guide.md)**: Detailed framework for creating high-quality user stories with proper dependency tracking and resource documentation
+- **[Story Creation Guide](./story-creation-guide.md)**: Detailed framework for creating high-quality user stories with **mandatory business value assessment**, dependency tracking, and testing strategy compliance
 
 ### 🔄 **Quality Assurance Integration**
 - **[Quality Gates Framework](./quality-gates-framework.md)**: Systematic quality checkpoints and approval processes at every development level
@@ -61,9 +61,11 @@ Apply **Document → Analyze → Refine → Approve** to:
 ### 📝 **Story Level**
 Apply **Document → Analyze → Refine → Approve** to:
 - Individual user story creation with business value
+- **MANDATORY: Business value assessment and ERP vision alignment**
+- **MANDATORY: Testing strategy compliance (ADR-004) and TDD planning**
 - Dependency mapping and resource requirements
 - Integration requirements and acceptance criteria
-- Implementation approach and testing strategy
+- Implementation approach and quality assurance planning
 
 ---
 

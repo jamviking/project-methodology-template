@@ -58,22 +58,32 @@ Project Objectives → PRD → Epic → Sprint → Story → Execution
 ---
 
 ### Phase 2: Analyze
-**Purpose**: Systematically identify gaps, risks, and improvement opportunities
+**Purpose**: Systematically identify gaps, risks, and improvement opportunities while validating business value alignment
 
 **Activities**:
 - Conduct structured gap analysis using established templates
+- **MANDATORY: Business Value Assessment** - Document alignment with project vision and ROI
 - Identify missing requirements or unclear specifications
 - Assess technical and process risks
 - Evaluate improvement opportunities
 - Validate feasibility and resource requirements
 
+**Business Value Assessment Requirements** (Mandatory for all stories):
+- **Project Vision Alignment**: How does this feature align with **[ERP Project Vision](../ERP-PROJECT-BRIEF.md)**?
+- **Phase Dependencies**: What Phase 0/1/2 capabilities does this enable or unblock?
+- **Technical Debt Prevention**: What future refactoring or architectural changes does this prevent?
+- **ROI Analysis**: Development investment (time/resources) vs prevented rework and strategic value
+- **Success Metrics**: Measurable business outcomes and technical indicators
+
 **Quality Criteria**:
 - All potential gaps systematically identified
+- **Business value assessment completed and documented**
 - Risks assessed with mitigation strategies
 - Improvement opportunities prioritized
 - Feasibility confirmed with available resources
+- **ROI justification demonstrates clear business value**
 
-**Approval Gate**: Gap analysis and improvement recommendations must be approved
+**Approval Gate**: Gap analysis, business value assessment, and improvement recommendations must be approved
 
 ---
 
