@@ -1,7 +1,7 @@
 # ADR Process Guide: Architecture Decision Management
 
 ## Overview
-This guide establishes a systematic approach for creating, managing, and maintaining Architectural Decision Records (ADRs) throughout {{PROJECT_NAME}} lifecycle. This process is designed to be reusable across different projects while maintaining consistency in decision documentation.
+This guide establishes a systematic approach for creating, managing, and maintaining Architectural Decision Records (ADRs) throughout the project lifecycle. This process is designed to be reusable across different projects while maintaining consistency in decision documentation.
 
 ## Core Principles
 
@@ -12,7 +12,7 @@ All significant architectural decisions must be documented and easily discoverab
 Decisions must capture not just the "what" but the "why" - including the context, alternatives considered, and trade-offs made.
 
 ### 3. Living Documentation
-ADRs are living documents that evolve with the system and must be maintained throughout {{PROJECT_NAME}} lifecycle.
+ADRs are living documents that evolve with the system and must be maintained throughout the project lifecycle.
 
 ### 4. Process Integration
 ADR creation and management must be integrated into existing development workflows, not treated as separate overhead.

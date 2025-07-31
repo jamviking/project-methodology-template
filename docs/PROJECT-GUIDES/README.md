@@ -1,7 +1,7 @@
 # Project Guides: Complete Development Methodology
 
 ## Overview
-This directory contains the complete development methodology for {{PROJECT_NAME}}, implementing a systematic **Document → Analyze → Refine → Approve** philosophy that ensures quality at every level of development from project conception to story execution.
+This directory contains the complete development methodology for the project, implementing a systematic **Document → Analyze → Refine → Approve** philosophy that ensures quality at every level of development from project conception to story execution.
 
 ## Core Philosophy
 Our agile development methodology is built on the principle that every level of work—from high-level objectives to individual stories—must complete a rigorous quality cycle before execution begins. This ensures comprehensive planning, gap identification, and continuous improvement throughout the development lifecycle.
@@ -15,7 +15,7 @@ Our agile development methodology is built on the principle that every level of 
 
 ### 🏗️ **Architectural Decision Management**
 - **[ADR Registry](./adr-registry.md)**: Complete index of all architectural decisions with status tracking and cross-references
-- **[ADR Process Guide](./adr-process-guide.md)**: Comprehensive guide for creating, managing, and maintaining architectural decisions throughout {{PROJECT_NAME}} lifecycle
+- **[ADR Process Guide](./adr-process-guide.md)**: Comprehensive guide for creating, managing, and maintaining architectural decisions throughout the project lifecycle
 
 ### 📋 **Story Development Framework**
 - **[Story Creation Guide](./story-creation-guide.md)**: Detailed framework for creating high-quality user stories with **mandatory business value assessment**, dependency tracking, and testing strategy compliance

@@ -1,7 +1,7 @@
 # Development Philosophy: Document → Analyze → Refine → Approve
 
 ## Core Philosophy Statement
-Our development methodology is built on a systematic, hierarchical quality assurance process that ensures every level of {{PROJECT_NAME}}—from high-level objectives to individual stories—follows a rigorous **Document → Analyze → Refine → Approve** cycle before execution begins.
+Our development methodology is built on a systematic, hierarchical quality assurance process that ensures every level of the project—from high-level objectives to individual stories—follows a rigorous **Document → Analyze → Refine → Approve** cycle before execution begins.
 
 ## Fundamental Principles
 
@@ -271,6 +271,101 @@ Project Objectives → PRD → Epic → Sprint → Story → Execution
 - Use tools that support living documentation practices
 - Assign clear ownership for different documentation types
 - Regular documentation health checks and updates
+
+---
+
+## Development Patterns and Anti-Patterns
+
+### Critical Development Patterns
+
+#### Express.js Route Ordering
+**CRITICAL**: Route order matters in Express.js - more specific routes must come before generic ones.
+
+**❌ WRONG ORDER**:
+```javascript
+router.get('/:type/:region/countries', handler1);           // Generic route
+router.get('/economic/:abbreviation/countries', handler2);  // Specific route - NEVER REACHED!
+```
+
+**✅ CORRECT ORDER**:
+```javascript
+router.get('/economic/:abbreviation/countries', handler2);  // Specific route FIRST
+router.get('/:type/:region/countries', handler1);           // Generic route SECOND
+```
+
+**Why This Matters**: 
+- Express matches routes in definition order
+- Generic patterns like `/:type/:region/countries` will match `/economic/EU/countries`
+- The specific handler never gets a chance to run
+- This causes subtle bugs where requests go to wrong controllers
+
+**Prevention**:
+- Always define specific routes before generic ones
+- Use route testing to verify correct handler is called
+- Document route order dependencies in comments
+
+#### Integration Test Data Management
+**Pattern**: Each test describe block must manage its own data lifecycle
+
+**✅ CORRECT PATTERN**:
+```javascript
+describe('Test Group', () => {
+  beforeEach(async () => {
+    await Model.deleteMany({});  // Clean slate for each test
+    await createTestData();      // Create fresh test data
+  });
+});
+```
+
+**❌ WRONG PATTERN**:
+```javascript
+beforeEach(async () => {
+  await Model.deleteMany({});  // Global cleanup AFTER test data creation
+});
+
+describe('Test Group', () => {
+  beforeEach(async () => {
+    await createTestData();     // Gets deleted by global beforeEach!
+  });
+});
+```
+
+### Anti-Patterns to Avoid
+
+#### Route Definition Anti-Patterns
+- ❌ Defining generic routes before specific ones
+- ❌ Using complex validation chains without testing route precedence  
+- ❌ Not documenting route order dependencies
+
+#### Test Anti-Patterns
+- ❌ Global cleanup that interferes with test-specific data setup
+- ❌ Assuming test execution order when tests should be independent
+- ❌ Not verifying which controller/handler is actually being called
+
+#### Debugging Anti-Patterns
+- ❌ Adding debug logs and assuming they'll appear without verifying code path
+- ❌ Making multiple changes without testing individual fixes
+- ❌ Not checking route matching when API calls succeed but wrong logic runs
+
+### Development Checklist
+
+#### Before Adding New Routes
+- [ ] Check existing route patterns for conflicts
+- [ ] Place specific routes before generic ones
+- [ ] Test route matching with sample URLs
+- [ ] Document any route order dependencies
+
+#### Before Writing Integration Tests  
+- [ ] Plan test data lifecycle (creation/cleanup)
+- [ ] Verify test isolation (each test can run independently)
+- [ ] Check for global setup/teardown conflicts
+- [ ] Test actual vs expected controller execution
+
+#### When Debugging Route Issues
+- [ ] Verify which controller/handler is actually being called
+- [ ] Check route definition order for conflicts
+- [ ] Test route matching with exact URLs from tests
+- [ ] Confirm request reaches intended code path before debugging logic
 
 ---
 

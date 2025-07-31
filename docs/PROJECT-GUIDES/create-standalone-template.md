@@ -1,7 +1,7 @@
 # Creating Standalone Project Guides Template
 
 ## Overview
-This guide explains how to extract {{PROJECT_NAME}} guides system into a standalone, reusable template that can be deployed to any project without dependencies on the original {{PROJECT_NAME}}.
+This guide explains how to extract the project guides system into a standalone, reusable template that can be deployed to any project without dependencies on the original ERP project.
 
 ## Approaches for Independence
 
@@ -116,7 +116,7 @@ const setup = require('../lib/setup');
 program
   .version('1.0.0')
   .description('Initialize project with development methodology guides')
-  .argument('<project-name>', 'Name of {{PROJECT_NAME}}')
+  .argument('<project-name>', 'Name of the project')
   .option('-p, --path <path>', 'Target directory path', '.')
   .option('-t, --template <template>', 'Template type', 'standard')
   .action(async (projectName, options) => {
@@ -204,9 +204,9 @@ mkdir -p docs/{analysis,epics,sprints}
 mkdir -p .claude scripts
 
 # Replace project-specific content with placeholders
-find docs -name "*.md" -exec sed -i 's/{{PROJECT_NAME}}/{{PROJECT_NAME}}/g' {} \;
-find docs -name "*.md" -exec sed -i 's/{{PROJECT_NAME}}/{{PROJECT_NAME}}/g' {} \;
-find docs -name "*.md" -exec sed -i 's/{{PROJECT_NAME}}/{{PROJECT_NAME}}/g' {} \;
+find docs -name "*.md" -exec sed -i 's/the ERP project/{{PROJECT_NAME}}/g' {} \;
+find docs -name "*.md" -exec sed -i 's/ERP project/{{PROJECT_NAME}}/g' {} \;
+find docs -name "*.md" -exec sed -i 's/the project/{{PROJECT_NAME}}/g' {} \;
 ```
 
 #### 2. Create Universal Initialization Script
@@ -281,7 +281,7 @@ cat > "$TARGET_PATH/docs/PROJECT-BRIEF.md" << EOF
 Development methodology and quality assurance framework:
 
 ### Architectural Decision Records (ADRs)
-Key architectural decisions that shape {{PROJECT_NAME}}:
+Key architectural decisions that shape the project:
 - **[ADR Registry](./PROJECT-GUIDES/adr-registry.md)**: Complete index of all architectural decisions
 - **[ADR Process Guide](./PROJECT-GUIDES/adr-process-guide.md)**: How architectural decisions are made and documented
 
@@ -396,7 +396,7 @@ cd project-guides-v1.0.0
 ## Benefits of Standalone Approach
 
 ### ✅ **Complete Independence**
-- No dependencies on source {{PROJECT_NAME}}
+- No dependencies on source ERP project
 - Self-contained methodology package
 - Version-controlled template evolution
 

@@ -1,7 +1,7 @@
 # Architectural Decision Records (ADR) Registry
 
 ## Purpose
-This registry maintains a comprehensive index of all architectural decisions made for {{PROJECT_NAME}}. Each ADR documents important technical decisions, their context, rationale, and consequences to ensure project continuity and knowledge transfer.
+This registry maintains a comprehensive index of all architectural decisions made for the ERP project. Each ADR documents important technical decisions, their context, rationale, and consequences to ensure project continuity and knowledge transfer.
 
 ## ADR Status Legend
 - **🟢 Accepted**: Decision is active and implemented
@@ -39,7 +39,7 @@ This registry maintains a comprehensive index of all architectural decisions mad
 
 **Related Documentation**:
 - [Auth PRD](../auth/AUTH-PRD.md)
-- [Sprint 3 Core Services](../sprints/sprint-3-core-services.md)
+- [Sprint 3 Core Services](../sprints/sprint-3-infrastructure-core-services.md)
 - [Company Organization PRD](../modules/0a-company-organization-prd.md) (JWT payload structure)
 
 ---

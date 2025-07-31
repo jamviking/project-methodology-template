@@ -64,7 +64,7 @@ cp docs/standards/adr-template.md "$STANDARDS_DIR/"
 
 # Create customized README
 echo "📚 Creating customized README..."
-sed "s/{{PROJECT_NAME}}/$PROJECT_NAME/g" docs/PROJECT-GUIDES/README.md > "$GUIDES_DIR/README.md"
+sed "s/the project/$PROJECT_NAME/g" docs/PROJECT-GUIDES/README.md > "$GUIDES_DIR/README.md"
 
 # Create initial project context file
 echo "📄 Creating initial project context..."
@@ -106,7 +106,7 @@ cat > "$TARGET_PATH/docs/PROJECT-BRIEF.md" << EOF
 Development methodology and quality assurance framework:
 
 ### Architectural Decision Records (ADRs)
-Key architectural decisions that shape {{PROJECT_NAME}}:
+Key architectural decisions that shape the project:
 - **[ADR Registry](./PROJECT-GUIDES/adr-registry.md)**: Complete index of all architectural decisions
 - **[ADR Process Guide](./PROJECT-GUIDES/adr-process-guide.md)**: How architectural decisions are made and documented
 
