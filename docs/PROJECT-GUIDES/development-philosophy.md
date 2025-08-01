@@ -3,6 +3,33 @@
 ## Core Philosophy Statement
 Our development methodology is built on a systematic, hierarchical quality assurance process that ensures every level of the project—from high-level objectives to individual stories—follows a rigorous **Document → Analyze → Refine → Approve** cycle before execution begins.
 
+## Supreme Guiding Principle
+
+### KISS - Keep It Simple, Stupid
+**THIS PRINCIPLE SUPERSEDES ALL OTHERS**
+
+The KISS principle is the foundational philosophy that governs all development decisions, architectural choices, and implementation approaches. When in doubt, when facing complexity, when choosing between options - **ALWAYS choose the simplest solution that works**.
+
+**Application Guidelines**:
+- **Simple over clever**: Choose readable, maintainable code over "elegant" complexity
+- **Minimal viable solution**: Solve the immediate problem without over-engineering for future "what-ifs"
+- **Clear over compact**: Prefer explicit, understandable code over terse, "smart" implementations
+- **Direct over abstracted**: Avoid unnecessary abstractions, patterns, or frameworks
+- **Proven over novel**: Use established, simple patterns rather than experimental approaches
+
+**Decision Framework**:
+1. **First Ask**: What is the simplest solution that solves this problem?
+2. **Then Verify**: Does this simple solution meet all actual (not imagined) requirements?
+3. **Only Then**: Consider if additional complexity is truly justified by concrete business needs
+
+**Complexity Warning Signs**:
+- If you need extensive documentation to explain how something works
+- If new team members can't understand the solution quickly
+- If debugging requires deep knowledge of multiple abstraction layers
+- If the solution feels "elegant" but requires mental gymnastics to follow
+
+**Remember**: We are building an ERP system that needs to be maintained, extended, and debugged by humans. Simplicity is not just a preference—it's a business requirement for long-term success.
+
 ## Fundamental Principles
 
 ### 1. Hierarchical Quality Gates
