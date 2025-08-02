@@ -3,22 +3,26 @@
 ## Overview
 This directory contains the complete development methodology for the project, implementing a systematic **Document → Analyze → Refine → Approve** philosophy that ensures quality at every level of development from project conception to story execution.
 
-## Core Philosophy
-Our agile development methodology is built on the principle that every level of work—from high-level objectives to individual stories—must complete a rigorous quality cycle before execution begins. This ensures comprehensive planning, gap identification, and continuous improvement throughout the development lifecycle.
+## Core Philosophy - KISS First with UI-Parallel Development
+Our development methodology prioritizes **KISS (Keep It Simple, Stupid)** above all other principles. Every level of work—from objectives to stories—must complete a **KISS Reality Check** before any complex analysis begins. This prevents over-engineering and ensures we build only what users actually need.
+
+**UI-Parallel Development Standard**: Following **[ADR-007: UI-Parallel Development Standard](../standards/ADR-007-ui-parallel-development-standard.md)**, all development efforts must include both backend and UI components developed in coordinated parallel streams. This ensures immediate user feedback and catches UX issues during development rather than after backend completion.
+
+**KISS Supersedes Everything**: When guides suggest complex analysis or comprehensive planning, always ask: "What's the simplest solution that solves the real business problem?"
 
 ---
 
 ## Complete Guide Index
 
-### 🎯 **Core Development Philosophy**
-- **[Development Philosophy](./development-philosophy.md)**: The foundational **Document → Analyze → Refine → Approve** methodology that governs all development activities
+### 🎯 **Core Development Philosophy - KISS Edition**
+- **[Development Philosophy](./development-philosophy.md)**: **KISS-first methodology** that prevents over-engineering through reality checks before any complex analysis
 
 ### 🏗️ **Architectural Decision Management**
 - **[ADR Registry](./adr-registry.md)**: Complete index of all architectural decisions with status tracking and cross-references
 - **[ADR Process Guide](./adr-process-guide.md)**: Comprehensive guide for creating, managing, and maintaining architectural decisions throughout the project lifecycle
 
-### 📋 **Story Development Framework**
-- **[Story Creation Guide](./story-creation-guide.md)**: Detailed framework for creating high-quality user stories with **mandatory business value assessment**, dependency tracking, and testing strategy compliance
+### 📋 **Story Development Framework - KISS Reality Check**
+- **[Story Creation Guide](./story-creation-guide.md)**: **KISS-focused framework** for creating simple user stories with **realistic business value assessment** that prevents over-engineering and inflated ROI claims
 
 ### 🔄 **Quality Assurance Integration**
 - **[Quality Gates Framework](./quality-gates-framework.md)**: Systematic quality checkpoints and approval processes at every development level
@@ -63,6 +67,7 @@ Apply **Document → Analyze → Refine → Approve** to:
 - Individual user story creation with business value
 - **MANDATORY: Business value assessment and ERP vision alignment**
 - **MANDATORY: Testing strategy compliance (ADR-004) and TDD planning**
+- **MANDATORY: UI-Parallel development requirements (ADR-007) - both backend and UI specifications**
 - Dependency mapping and resource requirements
 - Integration requirements and acceptance criteria
 - Implementation approach and quality assurance planning

@@ -84,33 +84,43 @@ Project Objectives → PRD → Epic → Sprint → Story → Execution
 
 ---
 
-### Phase 2: Analyze
-**Purpose**: Systematically identify gaps, risks, and improvement opportunities while validating business value alignment
+### Phase 2: Analyze - KISS Reality Check Edition
+**Purpose**: Prevent over-engineering by validating business need and identifying simplest solutions
+
+**MANDATORY FIRST STEP - KISS Reality Check**:
+- **Business Need Validation**: Do users actually need this for daily ERP work?
+- **Simplest Solution Assessment**: What's the most straightforward approach?
+- **YAGNI Check**: Are we solving real problems or imaginary future requirements?
+- **Over-Engineering Detection**: Is complexity justified by concrete business benefits?
 
 **Activities**:
-- Conduct structured gap analysis using established templates
-- **MANDATORY: Business Value Assessment** - Document alignment with project vision and ROI
-- Identify missing requirements or unclear specifications
-- Assess technical and process risks
-- Evaluate improvement opportunities
-- Validate feasibility and resource requirements
+- **KISS-Focused Gap Analysis**: Identify missing essential features (not theoretical improvements)
+- **Realistic Business Value Assessment**: Focus on actual user benefits, not inflated ROI claims
+- **Over-Engineering Elimination**: Remove complex features that don't solve real problems
+- **Simple Solution Validation**: Confirm straightforward approaches meet business needs
 
-**Business Value Assessment Requirements** (Mandatory for all stories):
-- **Project Vision Alignment**: How does this feature align with **[ERP Project Vision](../ERP-PROJECT-BRIEF.md)**?
-- **Phase Dependencies**: What Phase 0/1/2 capabilities does this enable or unblock?
-- **Technical Debt Prevention**: What future refactoring or architectural changes does this prevent?
-- **ROI Analysis**: Development investment (time/resources) vs prevented rework and strategic value
-- **Success Metrics**: Measurable business outcomes and technical indicators
+**Business Value Assessment - Reality-Based Requirements**:
+- **Actual User Impact**: How does this improve real ERP workflows (orders, invoices, inventory)?
+- **Honest Time Investment**: Realistic development hours without feature creep
+- **Genuine Business Benefits**: Concrete time savings and error reduction (no fiction)
+- **KISS Alternative Analysis**: Can we solve this more simply?
+- **ROI Reality Check**: Flag assessments >500% ROI as likely over-engineered
+
+**Over-Engineering Warning Signs** (Reject if present):
+- ❌ Solutions for "international markets" without confirmed business plan
+- ❌ Complex frameworks for simple data storage/retrieval
+- ❌ "Scalability" features for <100 user systems
+- ❌ "Best practices" implementations without business justification
+- ❌ Multi-week solutions for problems solvable in hours
 
 **Quality Criteria**:
-- All potential gaps systematically identified
-- **Business value assessment completed and documented**
-- Risks assessed with mitigation strategies
-- Improvement opportunities prioritized
-- Feasibility confirmed with available resources
-- **ROI justification demonstrates clear business value**
+- **KISS validation completed**: Solution complexity matches problem complexity
+- **Essential gaps identified**: Only missing features that block real workflows
+- **Over-engineering eliminated**: Complex features without business justification removed
+- **Simple solution validated**: Straightforward approach confirmed to meet needs
+- **Realistic ROI documented**: Business value based on actual user benefits
 
-**Approval Gate**: Gap analysis, business value assessment, and improvement recommendations must be approved
+**Approval Gate**: KISS analysis, realistic business value, and simplified approach must be approved
 
 ---
 

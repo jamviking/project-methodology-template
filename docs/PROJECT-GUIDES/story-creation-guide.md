@@ -36,28 +36,51 @@ Stories must include specific requirements for integration testing and validatio
 - **Complexity**: [Simple/Medium/Complex]
 - **Type**: [Feature/Enhancement/Bug Fix/Technical Debt]
 
-## Business Value Assessment (MANDATORY)
+## Business Value Assessment (MANDATORY) - KISS Edition
 
-### ERP Project Vision Alignment
-- **Vision Alignment**: How does this story support the [ERP Project Vision](../ERP-PROJECT-BRIEF.md)?
-- **Strategic Value**: What strategic capabilities does this enable for the ERP platform?
-- **User Impact**: How does this directly benefit end users and business processes?
+### KISS Reality Check (Complete FIRST)
+- **Business Need Validation**: Do users actually need this for their daily ERP workflows?
+- **Simplest Solution Check**: What's the most straightforward way to solve this problem?
+- **YAGNI Validation**: Are we solving real problems or imaginary future requirements?
+- **Over-Engineering Warning**: Is this more complex than the business problem requires?
 
-### Phase Dependencies & Enablement
-- **Phase 0 Dependencies**: What foundational capabilities does this support or complete?
-- **Phase 1/2 Enablement**: What future phase capabilities does this unblock or accelerate?
-- **Integration Points**: How does this integrate with other modules and components?
+### Actual ERP User Value
+- **Daily Workflow Impact**: How does this improve actual user tasks (creating orders, sending invoices, managing inventory)?
+- **Time Savings**: How many minutes/hours does this save users per day/week?
+- **Error Reduction**: What specific user errors does this prevent?
+- **Process Simplification**: How does this make ERP workflows simpler, not more complex?
 
-### Technical Debt & ROI Analysis
-- **Technical Debt Prevention**: What future refactoring or architectural changes does this prevent?
-- **Development Investment**: Estimated time/resources required for implementation
-- **Prevented Rework**: Estimated time/cost saved by implementing this correctly now
-- **ROI Calculation**: Net benefit calculation (prevented work + strategic value - implementation cost)
+### Realistic ROI Analysis
 
-### Success Metrics
-- **Technical Metrics**: Code coverage, performance benchmarks, test pass rates
-- **Business Metrics**: User adoption, process efficiency, error reduction
-- **Strategic Metrics**: Platform capabilities enabled, integration readiness achieved
+#### Development Investment (Be Honest)
+- **Implementation Time**: Actual hours needed (avoid padding with "comprehensive" features)
+- **Testing Time**: Realistic test coverage, not exhaustive edge case testing
+- **Documentation Time**: Basic documentation, not extensive architectural treatises
+- **Total Investment**: Honest estimate without feature creep
+
+#### Real Business Benefits (No Fiction)
+- **Confirmed User Needs**: Benefits validated with actual user workflows (not theoretical)
+- **Concrete Time Savings**: Specific minutes/hours saved with realistic calculations
+- **Actual Error Prevention**: Real errors that actually occur and cost time
+- **Process Improvements**: Genuine workflow simplifications
+
+#### ROI Calculation - Reality Based
+```
+Real ROI = (Actual Time Saved + Actual Error Prevention) / Actual Development Time
+```
+
+**Warning Signs of Inflated ROI**:
+- ❌ ROI > 500% (usually indicates fictional benefits)
+- ❌ "International market" benefits without confirmed international business
+- ❌ "Scalability" benefits for features that will have <100 users
+- ❌ "Technical debt prevention" for problems that don't exist
+- ❌ "Regulatory compliance" for regulations that don't apply
+
+### Success Metrics - Keep It Real
+- **User Adoption**: Will users actually use this feature?
+- **Business Impact**: Measurable improvement in actual business processes
+- **Maintenance Burden**: How much ongoing work will this create?
+- **Simplicity Maintained**: Does this make the system simpler or more complex?
 
 ## Dependencies & Relationships
 
@@ -113,6 +136,14 @@ Stories must include specific requirements for integration testing and validatio
 - [ ] **Test Pyramid Allocation**: 70% unit tests, 20% integration tests, 10% e2e tests
 - [ ] **Integration Test Database**: Real test database used (no mocking per ADR-002)
 - [ ] **Business Value Documented**: Complete business value assessment linked and approved
+
+### UI-Parallel Development Requirements (MANDATORY - ADR-007)
+- [ ] **Backend Requirements Documented**: API endpoints, data models, business logic specifications
+- [ ] **UI Requirements Documented**: User interface specifications, user flows, acceptance criteria
+- [ ] **API-UI Integration Planned**: Clear contracts and data exchange formats defined
+- [ ] **UI Testing Strategy**: Both component and integration testing approaches documented
+- [ ] **Development Sequence Planned**: Backend foundation (1-2 days) followed by parallel UI development
+- [ ] **User Feedback Integration**: Plan for incorporating UI feedback into backend refinements
 
 ### Quality Requirements
 - [ ] [Code coverage >= 80%]
@@ -234,8 +265,13 @@ Stories must include specific requirements for integration testing and validatio
 - [ ] [Consumer validation testing]
 - [ ] [Performance testing and optimization]
 
-### Phase 4: Documentation & Handoff
-- [ ] [Complete resource documentation]
+### Phase 4: UI Development & Integration  
+- [ ] [UI component implementation with backend APIs]
+- [ ] [End-to-end user workflow testing]
+- [ ] [UI-backend integration validation]
+
+### Phase 5: Documentation & Handoff
+- [ ] [Complete resource documentation (backend + UI)]
 - [ ] [Update consumer guidance]
 - [ ] [Knowledge transfer to dependent story owners]
 ```
