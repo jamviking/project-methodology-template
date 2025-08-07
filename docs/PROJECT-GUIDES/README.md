@@ -86,7 +86,7 @@ Start with:
 Start with:
 1. [Development Philosophy](./development-philosophy.md) - Core methodology overview
 2. [Quality Gates Framework](./quality-gates-framework.md) - Managing approvals and quality checkpoints
-3. [Gap Analysis Templates](./gap-analysis-templates.md) - Systematic improvement identification
+3. [Gap Analysis Templates](./gap-analysis-template.md) - Systematic improvement identification
 
 ### 🏛️ **For Architects**
 Start with:
